@@ -1,8 +1,18 @@
+function criaRodape(){
+    let rodape = document.createElement('footer');
+    let conteudo = document.querySelector('body');
+    rodape.classList.add('rodape');
+    conteudo.appendChild(rodape);
+}
+criaRodape()
+
+
 let user = document.querySelector('title');
         user.innerText += ' Gandalf'
         
         let pagina = document.body.classList.add('CURSO-DEVQUEST');
         let conteudo = document.querySelector('h1');
+        conteudo.style.textAlign = 'center';
         let link = 'https://github.com/JOAO11092005/reset-estudos'
         let css = document.querySelector('head');
         function criaP(valor) {
