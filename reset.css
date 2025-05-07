@@ -1,0 +1,24 @@
+/*reset para estudar no vs code
+
+configuração  */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --fundo: #000;
+  --cor: blueviolet;
+  --tamanho-da-fonte: 40px
+}
+
+body {
+  background-color: var(--fundo);
+  color: var(--cor);
+  font-size: var(--tamanho-da-fonte);
+  font-family: "Roboto Mono", monospace;
+  padding: 10px;
+}
