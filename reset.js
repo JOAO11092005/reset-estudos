@@ -1,4 +1,7 @@
-  let pagina = document.body.classList.add('CURSO-DEVQUEST');
+let user = document.querySelector('title');
+        user.innerText += ' Gandalf'
+        
+        let pagina = document.body.classList.add('CURSO-DEVQUEST');
         let conteudo = document.querySelector('h1');
         let link = 'https://github.com/JOAO11092005/reset-estudos'
         let css = document.querySelector('head');
@@ -40,6 +43,14 @@
             css.href = `${valor}`
             conteudo.appendChild(css);
         }
-
+        function imagemSite(){
+            const link = document.createElement('link')
+            const conteudoHead = document.querySelector('head');
+            link.rel = 'shortcut icon';
+            link.type = 'image/x-icon'
+            link.href = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTjZPEIhxr5ubMJppJ6vhVjsy7f3Av9bF2YA&s';
+            conteudoHead.appendChild(link)
+        }
+        imagemSite()
         criaCss('https://joao11092005.github.io/reset-estudos/reset.css')
         criaLink(link)
