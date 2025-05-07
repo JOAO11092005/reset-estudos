@@ -1,27 +1,52 @@
-/*reset para estudar no vs code
+  /*reset para estudar no vs code
 
 configuração  */
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-:root {
-  --fundo: #000;
-  --cor: blueviolet;
-  --tamanho-da-fonte: 40px
-}
+        :root {
+            --fundo: #000;
+            --cor: blueviolet;
+            --tamanho-da-fonte: 40px;
+            --reseta-borda-imagem: 50px
+        }
 
-body {
-  background-color: var(--fundo);
-  color: var(--cor);
-  font-size: var(--tamanho-da-fonte);
-  font-family: "Roboto Mono", monospace;
-  padding: 10px;
-}
-h1{
-  text-transform: uppercase;
-}
+        body {
+            background-color: var(--fundo);
+            color: var(--cor);
+            font-size: var(--tamanho-da-fonte);
+            font-family: "Roboto Mono", monospace;
+            padding: 0px;
+        }
+
+        h1 {
+            text-transform: uppercase;
+        }
+
+        p {
+            position: relative
+        }
+
+        .gemeos {
+            border-radius: var(--reseta-borda-imagem);
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-30%);
+            opacity: 0.8;
+        }
+
+        .rodape {
+            position: absolute;
+            bottom: 0px;
+            width: 99%;
+            padding: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
