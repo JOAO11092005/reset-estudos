@@ -13,6 +13,8 @@ let user = document.querySelector('title');
         let pagina = document.body.classList.add('CURSO-DEVQUEST');
         let conteudo = document.querySelector('h1');
         conteudo.style.textAlign = 'center';
+        conteudo.style.color = 'white';
+        conteudo.style.backgroundColor = 'blueviolet'
         let link = 'https://github.com/JOAO11092005/reset-estudos'
         let css = document.querySelector('head');
         function criaP(valor) {
