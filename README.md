@@ -108,7 +108,7 @@ Este projeto está sob a licença **MIT**. Consulte o arquivo `LICENSE` para mai
 
 ## 👨‍💻 Autor
 
-**João Victor**  
+**João Paulo Neves**  
 🔗 GitHub: [@JOAO11092005](https://github.com/JOAO11092005)  
-📅 Projeto criado em 2024  
+📅 Projeto criado em 2025  
 💬 Dedicado ao aprendizado e à comunidade de desenvolvedores iniciantes.
