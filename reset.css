@@ -22,3 +22,6 @@ body {
   font-family: "Roboto Mono", monospace;
   padding: 10px;
 }
+h1{
+  text-transform: uppercase;
+}
