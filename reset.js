@@ -66,32 +66,43 @@ let user = document.querySelector('title');
         imagemSite()
         criaCss('https://joao11092005.github.io/reset-estudos/reset.css')
         criaLink(link)
- // Intercepta console.log e mostra no HTML
-        (function interceptaConsoleLog() {
-            const consoleDiv = document.createElement('div');
-            consoleDiv.id = 'console-log';
-            consoleDiv.style.backgroundColor = 'black';
-            consoleDiv.style.color = 'blueviolet';
-            consoleDiv.style.padding = '10px';
-            consoleDiv.style.fontFamily = 'monospace';
-            consoleDiv.style.whiteSpace = 'pre-wrap';
-            consoleDiv.style.maxHeight = '300px';
-            consoleDiv.style.overflowY = 'auto';
-            consoleDiv.style.marginTop = '30px';
-            consoleDiv.style.border = '2px solid blueviolet';
-            document.body.appendChild(consoleDiv);
+imagemSite();
+criaCss('https://joao11092005.github.io/reset-estudos/reset.css');
 
-            const originalLog = console.log;
+// MOVA ESSA LINHA PARA DEPOIS DA DEFINIÇÃO DA FUNÇÃO
+// criaLink(link); <<-- REMOVE DAQUI
 
-            console.log = function (...args) {
-                const message = args.map(arg =>
-                    typeof arg === 'object' ? JSON.stringify(arg, null, 2) : String(arg)
-                ).join(' ');
+// Intercepta console.log e mostra no HTML
+(function interceptaConsoleLog() {
+    const consoleDiv = document.createElement('div');
+    consoleDiv.id = 'console-log';
+    consoleDiv.style.backgroundColor = 'black';
+    consoleDiv.style.color = 'blueviolet';
+    consoleDiv.style.padding = '10px';
+    consoleDiv.style.fontFamily = 'monospace';
+    consoleDiv.style.whiteSpace = 'pre-wrap';
+    consoleDiv.style.maxHeight = '300px';
+    consoleDiv.style.overflowY = 'auto';
+    consoleDiv.style.marginTop = '30px';
+    consoleDiv.style.border = '2px solid blueviolet';
+    document.body.appendChild(consoleDiv);
 
-                const line = document.createElement('div');
-                line.textContent = message;
-                consoleDiv.appendChild(line);
+    const originalLog = console.log;
 
-                originalLog.apply(console, args); // ainda exibe no console dev
-            };
+    console.log = function (...args) {
+        const message = args.map(arg =>
+            typeof arg === 'object' ? JSON.stringify(arg, null, 2) : String(arg)
+        ).join(' ');
+
+        const line = document.createElement('div');
+        line.textContent = message;
+        consoleDiv.appendChild(line);
+
+        originalLog.apply(console, args); // ainda exibe no console dev
+    };
+})();
+
+// ✅ CHAME AQUI, AGORA FUNCIONA
+criaLink(link);
+
         })();
